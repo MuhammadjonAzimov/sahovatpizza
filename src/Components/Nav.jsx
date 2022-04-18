@@ -119,8 +119,9 @@ const Navigation = styled.div`
             height: 40px;
             flex-direction: row;
             justify-content: space-between;
-            border-radius: 6px;
-            padding: 0 12px;
+            border-radius: 8px;
+            padding: 4px 8px;
+            gap: 2px;
         }
 
         :hover {
@@ -170,6 +171,10 @@ const Header = styled.div`
         align-items: center;
         gap: 12px;
 
+        @media  (max-width: 1000px) {
+            gap: 8px;
+        }
+
         .logo {
             width: 32px;
             height: 32px;
@@ -180,6 +185,12 @@ const Header = styled.div`
             font-size: 20px;
             line-height: 24px;
             color: #191919;
+
+            @media  (max-width: 1000px) {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 22px;
+            }
         }
     }
 
@@ -194,10 +205,19 @@ const Header = styled.div`
         border-radius: 4px;
         cursor: pointer;
 
+        @media  (max-width: 1000px) {
+            padding: 6px 12px;
+            gap: 4px;
+        }
+
         .bag-price {
             font-weight: 400;
             font-size: 16px;
             color: white;
+
+            @media  (max-width: 1000px) {
+                font-size: 12px;
+            }
         }
     }
 `;
