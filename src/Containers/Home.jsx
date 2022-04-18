@@ -14,5 +14,5 @@ export default Home;
 
 const Wrapper = styled.div`
     width: 100%;
-    height: 100%;
+    height: 8000px;
 `;
