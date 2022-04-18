@@ -188,7 +188,7 @@ const Header = styled.div`
 
             @media  (max-width: 1000px) {
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 22px;
             }
         }
