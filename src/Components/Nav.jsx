@@ -26,37 +26,39 @@ const Nav = () => {
             </Header>
 
             <Navigation>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={fire} alt="" />
-                    <span className="nav-box_text">Aksiyalar</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={pizza} alt="" />
-                    <span className="nav-box_text">Pizza</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={sushi} alt="" />
-                    <span className="nav-box_text">Sushi</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={drik} alt="" />
-                    <span className="nav-box_text">Ichimlik</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={snack} alt="" />
-                    <span className="nav-box_text">Fri</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={combo} alt="" />
-                    <span className="nav-box_text">Kombo</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={dessert} alt="" />
-                    <span className="nav-box_text">Dessert</span>
-                </div>
-                <div className="nav-box">
-                    <img className="nav-box_icon" src={sauce} alt="" />
-                    <span className="nav-box_text">Sous</span>
+                <div className="menu">
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={fire} alt="" />
+                        <span className="nav-box_text">Aksiyalar</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={pizza} alt="" />
+                        <span className="nav-box_text">Pizza</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={sushi} alt="" />
+                        <span className="nav-box_text">Sushi</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={drik} alt="" />
+                        <span className="nav-box_text">Ichimlik</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={snack} alt="" />
+                        <span className="nav-box_text">Fri</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={combo} alt="" />
+                        <span className="nav-box_text">Kombo</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={dessert} alt="" />
+                        <span className="nav-box_text">Dessert</span>
+                    </div>
+                    <div className="nav-box">
+                        <img className="nav-box_icon" src={sauce} alt="" />
+                        <span className="nav-box_text">Sous</span>
+                    </div>
                 </div>
             </Navigation>
         </Wrapper>
@@ -75,11 +77,29 @@ const Wrapper = styled.div`
 const Navigation = styled.div`
     width: 100%;
     height: 125px;
-    padding: 0 15%;
+    padding: 0 10%;
     user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    @media  (max-width: 1000px) {
+        height: 70px;
+    }
+    
+    .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media  (max-width: 1000px) {
+            gap: 20px;
+            overflow-x: auto;
+
+            ::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+    }
 
     .nav-box {
         width: 100px;
@@ -94,6 +114,15 @@ const Navigation = styled.div`
         border-radius: 12px;
         cursor: pointer;
 
+        @media  (max-width: 1000px) {
+            width: 100px;
+            height: 40px;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 6px;
+            padding: 0 12px;
+        }
+
         :hover {
             .nav-box_text {
                 color: #E23535;
@@ -103,6 +132,11 @@ const Navigation = styled.div`
         .nav-box_icon {
             width: 32px;
             height: 32px;
+
+            @media  (max-width: 1000px) {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         .nav-box_text {
@@ -110,6 +144,12 @@ const Navigation = styled.div`
             font-size: 16px;
             line-height: 24px;
             color: #191919;
+
+            @media  (max-width: 1000px) {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
     }
 `;
@@ -117,7 +157,7 @@ const Navigation = styled.div`
 const Header = styled.div`
     width: 100%;
     height: 64px;
-    padding: 0 15%;
+    padding: 0 10%;
     background-color: white;
     user-select: none;
     
