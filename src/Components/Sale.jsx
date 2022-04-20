@@ -50,7 +50,7 @@ const Wrapper = styled.div`
 
     @media  (max-width: 1000px) {
         height: 450px;
-        padding: 30px 10%;
+        padding: 30px 8%;
     }
 
     .sale-container {

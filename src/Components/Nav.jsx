@@ -83,7 +83,7 @@ const Navigation = styled.div`
 
     @media  (max-width: 1000px) {
         height: 70px;
-        padding: 0 10%;
+        padding: 0 8%;
     }
     
     .menu {
@@ -169,7 +169,7 @@ const Header = styled.div`
     justify-content: space-between;
 
     @media  (max-width: 1000px) {
-        padding: 0 10%;
+        padding: 0 8%;
     }
 
     .logo-container {
