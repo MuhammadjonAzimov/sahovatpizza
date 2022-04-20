@@ -83,7 +83,7 @@ const Navigation = styled.div`
 
     @media  (max-width: 1000px) {
         height: 70px;
-        padding: 0 8%;
+        padding: 0 6%;
     }
     
     .menu {
@@ -94,7 +94,7 @@ const Navigation = styled.div`
         justify-content: space-between;
 
         @media  (max-width: 1000px) {
-            gap: 20px;
+            gap: 10px;
             overflow-x: auto;
 
             ::-webkit-scrollbar {
@@ -169,7 +169,7 @@ const Header = styled.div`
     justify-content: space-between;
 
     @media  (max-width: 1000px) {
-        padding: 0 8%;
+        padding: 0 6%;
     }
 
     .logo-container {
