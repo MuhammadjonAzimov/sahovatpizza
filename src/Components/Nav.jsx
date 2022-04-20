@@ -45,7 +45,7 @@ const Nav = () => {
                     </div>
                     <div className="nav-box">
                         <img className="nav-box_icon" src={snack} alt="" />
-                        <span className="nav-box_text">Fri</span>
+                        <span className="nav-box_text">Snak</span>
                     </div>
                     <div className="nav-box">
                         <img className="nav-box_icon" src={combo} alt="" />
@@ -76,19 +76,21 @@ const Wrapper = styled.div`
 
 const Navigation = styled.div`
     width: 100%;
-    height: 125px;
-    padding: 0 10%;
+    height: 110px;
+    padding: 0 15%;
     user-select: none;
+    background-color: #F9F9F9;
 
     @media  (max-width: 1000px) {
         height: 70px;
+        padding: 0 10%;
     }
     
     .menu {
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
 
         @media  (max-width: 1000px) {
@@ -158,13 +160,17 @@ const Navigation = styled.div`
 const Header = styled.div`
     width: 100%;
     height: 64px;
-    padding: 0 10%;
+    padding: 0 15%;
     background-color: white;
     user-select: none;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media  (max-width: 1000px) {
+        padding: 0 10%;
+    }
 
     .logo-container {
         display: flex;

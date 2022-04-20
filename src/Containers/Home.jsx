@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Nav from '../Components/Nav';
+import Sale from '../Components/Sale';
 
 const Home = () => {
     return (
         <Wrapper>
             <Nav />
+            <Sale />
         </Wrapper>
     );
 }
