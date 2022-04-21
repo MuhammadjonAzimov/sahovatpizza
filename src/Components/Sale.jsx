@@ -43,14 +43,13 @@ export default Sale;
 
 const Wrapper = styled.div`
     width: 100%;
-    height: 500px;
-    padding: 30px 15%;
+    height: 440px;
     display: flex;
     align-items: flex-end;
+    user-select: none;
 
     @media  (max-width: 1000px) {
-        height: 450px;
-        padding: 30px 6%;
+        height: 410px;
     }
 
     .sale-container {
@@ -75,7 +74,6 @@ const Wrapper = styled.div`
         width: 100%;
         border-radius: 12px;
         position: relative;
-        z-index: -1;
 
         .text {
             position: absolute;

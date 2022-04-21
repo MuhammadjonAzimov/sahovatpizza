@@ -72,6 +72,7 @@ const Wrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 123;
 `;
 
 const Navigation = styled.div`
@@ -146,7 +147,6 @@ const Navigation = styled.div`
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
-            color: #191919;
 
             @media  (max-width: 1000px) {
                 font-weight: 400;
@@ -190,7 +190,6 @@ const Header = styled.div`
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
-            color: #191919;
 
             @media  (max-width: 1000px) {
                 font-size: 18px;
