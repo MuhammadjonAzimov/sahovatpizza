@@ -1,77 +1,76 @@
-import React from 'react';
 import styled from 'styled-components';
 
-import chilliepizza from '../assets/chilliepizza.jpg'
-import cucumberpizza from '../assets/cucumberpizza.jpg'
-import greenpizza from '../assets/greenpizza.jpg'
-import seasonpizza from '../assets/4seasonpizza.jpg'
+import sushifill from '../assets/sushifill.jpg'
+import sushifillbru from '../assets/sushifillbru.jpg'
+import sushisuperfill from '../assets/sushisuperfill.jpg'
+import sushitiger from '../assets/sushitiger.jpg'
 
-const Pizzas = () => {
+const Sushies = () => {
 
-    const pizzasData = [
+    const sushiesData = [
         {
-            image: chilliepizza,
+            image: sushifill,
             id: 1,
-            title: 'Shirin chili',
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "99 000",
+            title: 'Filadelfiya inqirozi',
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "59 000",
         },
         {
-            image: cucumberpizza,
+            image: sushifillbru,
             id: 2,
-            title: 'Lazzat',
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "85 000",
+            title: 'Filadelfiya krem-brulye',
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "44 000",
         },
         {
-            image: greenpizza,
+            image: sushisuperfill,
             id: 3,
-            title: "Qo'ziqorinli",
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "91 000",
+            title: "Super Filadelfiya",
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "51 000",
         },
         {
-            image: seasonpizza,
+            image: sushitiger,
             id: 4,
-            title: 'Kombo',
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "80 000",
+            title: "Yo'lbars",
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "60 000",
         },
         {
-            image: seasonpizza,
+            image: sushitiger,
             id: 5,
-            title: 'Kombo',
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "80 000",
+            title: "Yo'lbars",
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "60 000",
         },
         {
-            image: greenpizza,
+            image: sushisuperfill,
             id: 6,
-            title: "Qo'ziqorinli",
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "91 000",
+            title: "Super Filadelfiya",
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "51 000",
         },
         {
-            image: chilliepizza,
+            image: sushifill,
             id: 7,
-            title: 'Shirin chili',
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "99 000",
+            title: 'Filadelfiya inqirozi',
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "59 000",
         },
         {
-            image: cucumberpizza,
+            image: sushifillbru,
             id: 8,
-            title: 'Lazzat',
-            description: "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
-            price: "85 000",
+            title: 'Filadelfiya krem-brulye',
+            description: "Семга, рис, сыр креметто, соус унаги, креветка, авокадо",
+            price: "44 000",
         },
     ]
 
     return (
         <Wrapper>
-            <h3 className='header'>Pizza</h3>
+            <h3 className='header'>Sushi</h3>
             <Container>
-                {pizzasData.map(({ image, title, description, price }) =>
+                {sushiesData.map(({ image, title, description, price }) =>
                     <Pizzacontainer key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -90,7 +89,7 @@ const Pizzas = () => {
     );
 }
 
-export default Pizzas;
+export default Sushies;
 
 const Wrapper = styled.div`
     width: 100%;
