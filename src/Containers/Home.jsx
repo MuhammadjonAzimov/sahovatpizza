@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import Sale from '../Components/Sale';
 import Drinks from './Drinks';
 import Pizzas from './Pizzas';
+import Combo from './Combo';
+import Snacs from './Snacs';
 import Sushies from './Sushies';
+import Desserts from './Desserts';
+import Sous from './Sous';
 
 const Home = () => {
     return (
@@ -12,6 +16,10 @@ const Home = () => {
             <Pizzas />
             <Sushies />
             <Drinks />
+            <Snacs />
+            <Combo />
+            <Desserts />
+            <Sous />
         </Wrapper>
     );
 }

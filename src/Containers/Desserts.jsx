@@ -1,76 +1,48 @@
 import styled from 'styled-components';
 
-import nosugarpepsi from '../assets/nosugarpepsi.jpg'
-import classicpepsi from '../assets/classicpepsi.jpg'
-import mirinda from '../assets/mirinda.jpg'
-import cherrypepsi from '../assets/cherrypepsi.jpg'
+import cheesrule from '../assets/cheesrule.jpg'
+import creamrule from '../assets/creamrule.jpg'
+import magnitcream from '../assets/magnitisecream.jpg'
+import boxcream from '../assets/boxmagnitcream.jpg'
 
-const Drinks = () => {
+const Desserts = () => {
 
-    const drinksData = [
+    const desertsData = [
         {
-            image: nosugarpepsi,
+            image: cheesrule,
             id: 1,
-            title: 'Shakarsiz pepsi',
-            description: "",
-            price: "9 000",
+            title: 'Pishloqli rule',
+            description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
+            price: "29 000",
         },
         {
-            image: classicpepsi,
+            image: creamrule,
             id: 2,
-            title: 'Classic pepsi',
-            description: "",
-            price: "8 000",
+            title: 'Krem rule',
+            description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
+            price: "28 000",
         },
         {
-            image: mirinda,
+            image: magnitcream,
             id: 3,
-            title: "Mirinda",
-            description: "",
-            price: "7 000",
+            title: "Magnit muzqaymoq",
+            description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
+            price: "5 000",
         },
         {
-            image: cherrypepsi,
+            image: boxcream,
             id: 4,
-            title: "Olchali pepsi",
-            description: "",
-            price: "9 000",
-        },
-        {
-            image: cherrypepsi,
-            id: 5,
-            title: "Olchali pepsi",
-            description: "",
-            price: "9 000",
-        },
-        {
-            image: mirinda,
-            id: 6,
-            title: "Mirinda",
-            description: "",
-            price: "7 000",
-        },
-        {
-            image: nosugarpepsi,
-            id: 7,
-            title: 'Shakarsiz pepsi',
-            description: "",
-            price: "9 000",
-        },
-        {
-            image: classicpepsi,
-            id: 8,
-            title: 'Classic pepsi',
-            description: "",
-            price: "8 000",
-        },
+            title: "Magnit muzqaymoq",
+            description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
+            price: "20 000",
+        }
     ]
 
     return (
         <Wrapper>
-            <h3 className='header'>Ichimliklar</h3>
+            <h3 className='header'>Dessert</h3>
             <Container>
-                {drinksData.map(({ image, title, description, price }) =>
+                {desertsData.map(({ image, title, description, price }) =>
                     <Pizzacontainer key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -89,7 +61,7 @@ const Drinks = () => {
     );
 }
 
-export default Drinks;
+export default Desserts;
 
 const Wrapper = styled.div`
     width: 100%;
