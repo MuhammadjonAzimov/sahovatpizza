@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Sale from '../Components/Sale';
+import Drinks from './Drinks';
 import Pizzas from './Pizzas';
 import Sushies from './Sushies';
 
@@ -10,6 +11,7 @@ const Home = () => {
             <Sale />
             <Pizzas />
             <Sushies />
+            <Drinks />
         </Wrapper>
     );
 }
