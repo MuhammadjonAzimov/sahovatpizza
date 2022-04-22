@@ -159,6 +159,11 @@ const Pizzacontainer = styled.div`
                 font-size: 14px;
                 line-height: 22px;
                 color: white;
+
+                @media  (max-width: 1000px) {
+                    padding: 10px 28px;
+                    font-size: 16px;
+                }
             }
 
             .price {
@@ -166,6 +171,10 @@ const Pizzacontainer = styled.div`
                 font-size: 12px;
                 line-height: 24px;
                 color: #FF7010;
+
+                @media  (max-width: 1000px) {
+                    font-size: 16px;
+                }
             }
         }
     }
