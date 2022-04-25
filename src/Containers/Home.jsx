@@ -8,6 +8,7 @@ import Snacs from './Snacs';
 import Sushies from './Sushies';
 import Desserts from './Desserts';
 import Sous from './Sous';
+import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <Combo />
             <Desserts />
             <Sous />
+            <Footer />
         </Wrapper>
     );
 }
