@@ -58,7 +58,7 @@ const Wrapper = styled.div`
 
     @media  (max-width: 1000px) {
         display: block;
-        padding: 22px 0;
+        padding: 12px 0;
     }
 
     h6 {
