@@ -73,7 +73,7 @@ const Drinks = () => {
             <h3 className='header'>Ichimliklar</h3>
             <Container>
                 {drinksData.map(({ image, title, description, price }) =>
-                    <Productcontainer key={Math.random()}>
+                    <Productcontainer id='drinks' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
                         </div>

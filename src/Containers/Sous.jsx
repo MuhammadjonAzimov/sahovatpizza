@@ -46,7 +46,7 @@ const Sous = () => {
             <h3 className='header'>Sous</h3>
             <Container>
                 {sousData.map(({ image, title, description, price }) =>
-                    <Productcontainer key={Math.random()}>
+                    <Productcontainer id='sous' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
                         </div>

@@ -45,7 +45,7 @@ const Combo = () => {
             <h3 className='header'>Combo</h3>
             <Container>
                 {comboData.map(({ image, title, description, price }) =>
-                    <Productcontainer key={Math.random()}>
+                    <Productcontainer id='kombo' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
                         </div>

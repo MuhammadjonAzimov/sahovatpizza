@@ -27,38 +27,38 @@ const Nav = () => {
 
             <Navigation>
                 <div className="menu">
-                    <div className="nav-box">
+                    <a href="#aksiyalar" className="nav-box">
                         <img className="nav-box_icon" src={fire} alt="" />
                         <span className="nav-box_text">Aksiyalar</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#pizza" className="nav-box">
                         <img className="nav-box_icon" src={pizza} alt="" />
                         <span className="nav-box_text">Pizza</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#sushi" className="nav-box">
                         <img className="nav-box_icon" src={sushi} alt="" />
                         <span className="nav-box_text">Sushi</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#drinks" className="nav-box">
                         <img className="nav-box_icon" src={drik} alt="" />
                         <span className="nav-box_text">Ichimlik</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#snak" className="nav-box">
                         <img className="nav-box_icon" src={snack} alt="" />
                         <span className="nav-box_text">Snak</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#kombo" className="nav-box">
                         <img className="nav-box_icon" src={combo} alt="" />
                         <span className="nav-box_text">Kombo</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#dessert" className="nav-box">
                         <img className="nav-box_icon" src={dessert} alt="" />
                         <span className="nav-box_text">Dessert</span>
-                    </div>
-                    <div className="nav-box">
+                    </a>
+                    <a href="#sous" className="nav-box">
                         <img className="nav-box_icon" src={sauce} alt="" />
                         <span className="nav-box_text">Sous</span>
-                    </div>
+                    </a>
                 </div>
             </Navigation>
         </Wrapper>
@@ -116,6 +116,8 @@ const Navigation = styled.div`
         border: 1px solid #F0F0F0;
         border-radius: 12px;
         cursor: pointer;
+        text-decoration: none;
+        color: #191919;
 
         @media  (max-width: 1000px) {
             width: 100px;

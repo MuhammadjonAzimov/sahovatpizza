@@ -45,7 +45,7 @@ const Snacs = () => {
             <h3 className='header'>Snak</h3>
             <Container>
                 {snaksData.map(({ image, title, description, price }) =>
-                    <Productcontainer key={Math.random()}>
+                    <Productcontainer id='snak' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
                         </div>
