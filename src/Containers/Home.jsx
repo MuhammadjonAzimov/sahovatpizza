@@ -9,10 +9,12 @@ import Sushies from './Sushies';
 import Desserts from './Desserts';
 import Sous from './Sous';
 import Footer from './Footer';
+import Nav from '../Components/Nav';
 
 const Home = () => {
     return (
         <Wrapper>
+            <Nav />
             <Sale />
             <Pizzas />
             <Sushies />

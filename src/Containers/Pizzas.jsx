@@ -6,6 +6,7 @@ import chilliepizza from '../assets/chilliepizza.jpg'
 import cucumberpizza from '../assets/cucumberpizza.jpg'
 import greenpizza from '../assets/greenpizza.jpg'
 import seasonpizza from '../assets/4seasonpizza.jpg'
+import { useState } from 'react';
 
 const Pizzas = () => {
 
@@ -68,11 +69,18 @@ const Pizzas = () => {
         },
     ]
 
+    const [bag, setBag] = useState([])
+
+    const addtobag = (data) => {
+        setBag([...bag, data]);
+        localStorage.setItem("bag", JSON.stringify([...bag, data]))
+    }
+
     return (
         <Wrapper>
             <h3 className='header'>Pizza</h3>
             <Container>
-                {pizzasData.map(({ image, title, description, price }) =>
+                {pizzasData.map(({ id, image, title, description, price }) =>
                     <Productcontainer id='pizza' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -81,7 +89,7 @@ const Pizzas = () => {
                             <h4 className='title'>{title}</h4>
                             <p className='description'>{description}</p>
                             <div className="price-box">
-                                <button>Tanlash</button>
+                                <button onClick={() => addtobag({ id, price, title, description, image })}>Tanlash</button>
                                 <p className='price'>{price} so'm dan</p>
                             </div>
                         </div>

@@ -10,8 +10,13 @@ import snack from '../assets/snacks_icon.svg'
 import combo from '../assets/combo_icon.svg'
 import dessert from '../assets/dessert_icon.svg'
 import sauce from '../assets/sauce_icon.svg'
+import { Link } from "react-router-dom";
+// import { useState } from "react";
 
 const Nav = () => {
+
+    // const [bag, setBag] = useState(JSON.parse(localStorage.getItem("bag")) || [])
+
     return (
         <Wrapper>
             <Header>
@@ -19,10 +24,12 @@ const Nav = () => {
                     <img className="logo" src={logo} alt="" />
                     <span className="logo-container_text">Saxovat pizza</span>
                 </div>
-                <div className="bag">
-                    <img src={bag} alt="" />
-                    <span className="bag-price">0 <span>so'm</span> </span>
-                </div>
+                <Link className="link" to={"/bag"}>
+                    <div className="bag">
+                        <img src={bag} alt="" />
+                        <span className="bag-price">0 <span>so'm</span> </span>
+                    </div>
+                </Link>
             </Header>
 
             <Navigation>
@@ -172,6 +179,10 @@ const Header = styled.div`
 
     @media  (max-width: 1000px) {
         padding: 0 6%;
+    }
+
+    .link {
+        text-decoration: none;
     }
 
     .logo-container {

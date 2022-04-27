@@ -6,7 +6,7 @@ import sale3 from '../assets/sale3.svg'
 
 const Sale = () => {
     return (
-        <Wrapper>
+        <Wrapper id='aksiyalar'>
             <div className="sale-container">
                 <div className="sale-box orange">
                     <img src={sale3} alt="" />

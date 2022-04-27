@@ -68,6 +68,7 @@ export const Productcontainer = styled.div`
                 font-size: 14px;
                 line-height: 22px;
                 color: white;
+                cursor: pointer;
 
                 @media  (max-width: 1000px) {
                     padding: 10px 28px;
