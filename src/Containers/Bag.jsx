@@ -98,7 +98,7 @@ const Header = styled.div`
         cursor: pointer;
 
         @media  (max-width: 1000px) {
-            padding: 6px 12px;
+            padding: 6px 10px;
             gap: 4px;
         }
 
