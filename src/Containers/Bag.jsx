@@ -57,8 +57,17 @@ const Productcontainer = styled.div`
     display: flex;
     position: relative;
 
+    @media  (max-width: 1000px) {
+        height: 200px;
+    }
+
     .img-container {
         width: 200px;
+
+        @media  (max-width: 1000px) {
+            display: flex;
+            align-items: center;
+        }
 
         img {
             width: 100%;
@@ -93,6 +102,12 @@ const Productcontainer = styled.div`
             gap: 15px;
             align-items: center;
 
+            @media  (max-width: 1000px) {
+                top: 80%;
+                right: 15px;
+                gap: 10px;
+            }
+
             button {
                 padding: 6px 22px;
                 background: #FF7010;
@@ -106,8 +121,8 @@ const Productcontainer = styled.div`
                 cursor: pointer;
 
                 @media  (max-width: 1000px) {
-                    padding: 10px 28px;
-                    font-size: 16px;
+                    padding: 6px 12px;
+                    font-size: 12px;
                 }
             }
 
@@ -118,7 +133,7 @@ const Productcontainer = styled.div`
                 color: #FF7010;
 
                 @media  (max-width: 1000px) {
-                    font-size: 16px;
+                    font-size: 12px;
                 }
             }
         }
