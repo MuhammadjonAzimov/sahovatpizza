@@ -7,7 +7,7 @@ import wings from '../assets/wings.jpg'
 import chikennuggets from '../assets/chikennuggets.jpg'
 import Shaverma from '../assets/shaverma.jpg'
 
-const Snacs = () => {
+const Snacs = ({ addtobag }) => {
 
     const snaksData = [
         {
@@ -44,7 +44,7 @@ const Snacs = () => {
         <Wrapper>
             <h3 className='header'>Snak</h3>
             <Container>
-                {snaksData.map(({ image, title, description, price }) =>
+                {snaksData.map(({ id, image, title, description, price }) =>
                     <Productcontainer id='snak' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -53,7 +53,7 @@ const Snacs = () => {
                             <h4 className='title'>{title}</h4>
                             <p className='description'>{description}</p>
                             <div className="price-box">
-                                <button>Tanlash</button>
+                                <button onClick={() => addtobag({ id, price, title, description, image })}>Tanlash</button>
                                 <p className='price'>{price} so'm dan</p>
                             </div>
                         </div>

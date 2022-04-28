@@ -7,7 +7,7 @@ import kombo2 from '../assets/kombo2.jpg'
 import kombo3 from '../assets/kombo3.jpg'
 import kombo4 from '../assets/kombo4.jpg'
 
-const Combo = () => {
+const Combo = ({ addtobag }) => {
 
     const comboData = [
         {
@@ -44,7 +44,7 @@ const Combo = () => {
         <Wrapper>
             <h3 className='header'>Combo</h3>
             <Container>
-                {comboData.map(({ image, title, description, price }) =>
+                {comboData.map(({ id, image, title, description, price }) =>
                     <Productcontainer id='kombo' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -53,7 +53,7 @@ const Combo = () => {
                             <h4 className='title'>{title}</h4>
                             <p className='description'>{description}</p>
                             <div className="price-box">
-                                <button>Tanlash</button>
+                                <button onClick={() => addtobag({ id, price, title, description, image })}>Tanlash</button>
                                 <p className='price'>{price} so'm dan</p>
                             </div>
                         </div>

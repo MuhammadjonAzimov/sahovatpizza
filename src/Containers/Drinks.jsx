@@ -7,7 +7,7 @@ import classicpepsi from '../assets/classicpepsi.jpg'
 import mirinda from '../assets/mirinda.jpg'
 import cherrypepsi from '../assets/cherrypepsi.jpg'
 
-const Drinks = () => {
+const Drinks = ({ addtobag }) => {
 
     const drinksData = [
         {
@@ -72,7 +72,7 @@ const Drinks = () => {
         <Wrapper>
             <h3 className='header'>Ichimliklar</h3>
             <Container>
-                {drinksData.map(({ image, title, description, price }) =>
+                {drinksData.map(({ id, image, title, description, price }) =>
                     <Productcontainer id='drinks' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -81,7 +81,7 @@ const Drinks = () => {
                             <h4 className='title'>{title}</h4>
                             <p className='description'>{description}</p>
                             <div className="price-box">
-                                <button>Tanlash</button>
+                                <button onClick={() => addtobag({ id, price, title, description, image })}>Tanlash</button>
                                 <p className='price'>{price} so'm dan</p>
                             </div>
                         </div>

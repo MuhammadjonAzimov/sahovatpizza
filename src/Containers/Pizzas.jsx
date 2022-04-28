@@ -6,9 +6,8 @@ import chilliepizza from '../assets/chilliepizza.jpg'
 import cucumberpizza from '../assets/cucumberpizza.jpg'
 import greenpizza from '../assets/greenpizza.jpg'
 import seasonpizza from '../assets/4seasonpizza.jpg'
-import { useState } from 'react';
 
-const Pizzas = () => {
+const Pizzas = ({ addtobag }) => {
 
     const pizzasData = [
         {
@@ -68,13 +67,6 @@ const Pizzas = () => {
             price: "85 000",
         },
     ]
-
-    const [bag, setBag] = useState([])
-
-    const addtobag = (data) => {
-        setBag([...bag, data]);
-        localStorage.setItem("bag", JSON.stringify([...bag, data]))
-    }
 
     return (
         <Wrapper>

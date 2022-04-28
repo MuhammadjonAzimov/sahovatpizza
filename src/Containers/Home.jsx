@@ -11,19 +11,19 @@ import Sous from './Sous';
 import Footer from './Footer';
 import Nav from '../Components/Nav';
 
-const Home = () => {
+const Home = ({ addtobag }) => {
     return (
         <Wrapper>
             <Nav />
             <Sale />
-            <Pizzas />
-            <Sushies />
-            <Drinks />
-            <Snacs />
-            <Combo />
-            <Desserts />
-            <Sous />
-            <Footer />
+            <Pizzas addtobag={addtobag} />
+            <Sushies addtobag={addtobag} />
+            <Drinks addtobag={addtobag} />
+            <Snacs addtobag={addtobag} />
+            <Combo addtobag={addtobag} />
+            <Desserts addtobag={addtobag} />
+            <Sous addtobag={addtobag} />
+            <Footer addtobag={addtobag} />
         </Wrapper>
     );
 }

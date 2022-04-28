@@ -8,7 +8,7 @@ import sous3 from '../assets/sous3.jpg'
 import sous4 from '../assets/sous4.jpg'
 
 
-const Sous = () => {
+const Sous = ({ addtobag }) => {
 
     const sousData = [
         {
@@ -45,7 +45,7 @@ const Sous = () => {
         <Wrapper>
             <h3 className='header'>Sous</h3>
             <Container>
-                {sousData.map(({ image, title, description, price }) =>
+                {sousData.map(({ id, image, title, description, price }) =>
                     <Productcontainer id='sous' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -54,7 +54,7 @@ const Sous = () => {
                             <h4 className='title'>{title}</h4>
                             <p className='description'>{description}</p>
                             <div className="price-box">
-                                <button>Tanlash</button>
+                                <button onClick={() => addtobag({ id, price, title, description, image })}>Tanlash</button>
                                 <p className='price'>{price} so'm dan</p>
                             </div>
                         </div>

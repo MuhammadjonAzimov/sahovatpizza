@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import bag from '../assets/bag.svg'
+import bagicon from '../assets/bag.svg'
 import logo from '../assets/logo.svg'
 import vektor from '../assets/vektor.svg'
 
-const Bag = () => {
+const Bag = ({ bag }) => {
     return (
         <Wrapper>
             <Header>
@@ -18,16 +18,128 @@ const Bag = () => {
                 </Link>
 
                 <div className="bag">
-                    <img src={bag} alt="" />
+                    <img src={bagicon} alt="" />
                     <span className="bag-price">Buyurtma berish</span>
                 </div>
 
             </Header>
+
+            <Container>
+                <div className="content">
+                    {bag.map(({ image, title, description, price }) =>
+                        <Productcontainer key={Math.random()}>
+                            <div className="img-container">
+                                <img src={image} alt="" />
+                            </div>
+                            <div className="text-container">
+                                <h4 className='title'>{title}</h4>
+                                <p className='description'>{description}</p>
+                                <div className="price-box">
+                                    <button>O'chirish</button>
+                                    <p className='price'>{price} so'm dan</p>
+                                </div>
+                            </div>
+                        </Productcontainer>)}
+                </div>
+            </Container>
         </Wrapper>
     );
 }
 
 export default Bag;
+
+const Productcontainer = styled.div`
+    width: 100%;
+    height: 170px;
+    background-color: white;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+
+    .img-container {
+        width: 200px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-container {
+        width: 100%;
+        border-radius: 0 0 12px 12px;
+        padding: 20px;
+        border-top: 1px solid #F0F0F0;
+
+        .title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            margin-top: 4px;
+        }
+
+        .price-box {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            button {
+                padding: 6px 22px;
+                background: #FF7010;
+                border-radius: 6px;
+                border: none;
+
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: white;
+                cursor: pointer;
+
+                @media  (max-width: 1000px) {
+                    padding: 10px 28px;
+                    font-size: 16px;
+                }
+            }
+
+            .price {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 24px;
+                color: #FF7010;
+
+                @media  (max-width: 1000px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+`;
+
+const Container = styled.div`
+    width: 100%;
+    height: calc(100% - 64px);
+    padding: 30px 15%;
+
+    @media  (max-width: 1000px) {
+        padding: 30px 6%;
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+`;
 
 const Wrapper = styled.div`
     width: 100%;

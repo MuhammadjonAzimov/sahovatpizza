@@ -7,7 +7,7 @@ import creamrule from '../assets/creamrule.jpg'
 import magnitcream from '../assets/magnitisecream.jpg'
 import boxcream from '../assets/boxmagnitcream.jpg'
 
-const Desserts = () => {
+const Desserts = ({ addtobag }) => {
 
     const desertsData = [
         {
@@ -44,7 +44,7 @@ const Desserts = () => {
         <Wrapper>
             <h3 className='header'>Dessert</h3>
             <Container>
-                {desertsData.map(({ image, title, description, price }) =>
+                {desertsData.map(({ id, image, title, description, price }) =>
                     <Productcontainer id='dessert' key={Math.random()}>
                         <div className="img-container">
                             <img src={image} alt="" />
@@ -53,7 +53,7 @@ const Desserts = () => {
                             <h4 className='title'>{title}</h4>
                             <p className='description'>{description}</p>
                             <div className="price-box">
-                                <button>Tanlash</button>
+                                <button onClick={() => addtobag({ id, price, title, description, image })}>Tanlash</button>
                                 <p className='price'>{price} so'm dan</p>
                             </div>
                         </div>
