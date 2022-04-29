@@ -16,28 +16,28 @@ const Sous = ({ addtobag }) => {
             id: 1,
             title: 'Sous',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "9 000",
+            price: "9000",
         },
         {
             image: sous2,
             id: 2,
             title: 'Sous',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "8 000",
+            price: "8000",
         },
         {
             image: sous3,
             id: 3,
             title: "Sous",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "10 000",
+            price: "10000",
         },
         {
             image: sous4,
             id: 4,
             title: "Sous",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "11 000",
+            price: "11000",
         }
     ]
 

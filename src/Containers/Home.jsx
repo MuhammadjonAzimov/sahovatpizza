@@ -11,10 +11,10 @@ import Sous from './Sous';
 import Footer from './Footer';
 import Nav from '../Components/Nav';
 
-const Home = ({ addtobag }) => {
+const Home = ({ addtobag, bag }) => {
     return (
         <Wrapper>
-            <Nav />
+            <Nav bag={bag} />
             <Sale />
             <Pizzas addtobag={addtobag} />
             <Sushies addtobag={addtobag} />

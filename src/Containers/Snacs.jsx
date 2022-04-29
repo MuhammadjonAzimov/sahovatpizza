@@ -15,28 +15,28 @@ const Snacs = ({ addtobag }) => {
             id: 1,
             title: 'Kartoshka fri',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "19 000",
+            price: "19000",
         },
         {
             image: wings,
             id: 2,
             title: 'Qanotchalar',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "28 000",
+            price: "28000",
         },
         {
             image: chikennuggets,
             id: 3,
             title: "Nagets",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "17 000",
+            price: "17000",
         },
         {
             image: Shaverma,
             id: 4,
             title: "Lavash",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "11 000",
+            price: "11000",
         }
     ]
 

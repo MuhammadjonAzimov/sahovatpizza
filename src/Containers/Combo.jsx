@@ -15,28 +15,28 @@ const Combo = ({ addtobag }) => {
             id: 1,
             title: 'Ikkikara kombo',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "209 000",
+            price: "209000",
         },
         {
             image: kombo2,
             id: 2,
             title: 'Uchkara kombo',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "308 000",
+            price: "308000",
         },
         {
             image: kombo3,
             id: 3,
             title: "Ikki + bir",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "217 000",
+            price: "217000",
         },
         {
             image: kombo4,
             id: 4,
             title: "Uch + bir",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
-            price: "39 000",
+            price: "39000",
         }
     ]
 

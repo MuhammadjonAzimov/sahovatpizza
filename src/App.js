@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<Home addtobag={addtobag} />} />
+      <Route path='/' element={<Home bag={bag} addtobag={addtobag} />} />
       <Route path='/bag' element={<Bag bag={bag} />} />
     </Routes>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import logo from '../assets/logo.svg'
-import bag from '../assets/bag.svg'
+import bagicon from '../assets/bag.svg'
 import fire from '../assets/fire.svg'
 import pizza from '../assets/pizza_icon.svg'
 import sushi from '../assets/sushi_icon.svg'
@@ -11,11 +11,14 @@ import combo from '../assets/combo_icon.svg'
 import dessert from '../assets/dessert_icon.svg'
 import sauce from '../assets/sauce_icon.svg'
 import { Link } from "react-router-dom";
-// import { useState } from "react";
 
-const Nav = () => {
+const Nav = ({ bag }) => {
 
-    // const [bag, setBag] = useState(JSON.parse(localStorage.getItem("bag")) || [])
+    const totalprice = bag.map(({ price }) => Number(price))
+
+    const total = totalprice.reduce(function (previous, current) {
+        return previous + current;
+    }, 0);
 
     return (
         <Wrapper>
@@ -26,8 +29,8 @@ const Nav = () => {
                 </div>
                 <Link className="link" to={"/bag"}>
                     <div className="bag">
-                        <img src={bag} alt="" />
-                        <span className="bag-price">0 <span>so'm</span> </span>
+                        <img src={bagicon} alt="" />
+                        <span className="bag-price">{total} <span>so'm</span> </span>
                     </div>
                 </Link>
             </Header>
