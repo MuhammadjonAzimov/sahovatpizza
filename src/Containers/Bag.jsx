@@ -4,45 +4,52 @@ import styled from 'styled-components';
 import bagicon from '../assets/bag.svg'
 import logo from '../assets/logo.svg'
 import vektor from '../assets/vektor.svg'
+import Footer from './Footer'
 
 const Bag = ({ bag }) => {
     return (
-        <Wrapper>
-            <Header>
-                <Link className='link' to={"/"}>
-                    <div className="logo-container">
-                        <img className='vektor' src={vektor} alt="" />
-                        <img className="logo" src={logo} alt="" />
-                        <span className="logo-container_text">Saxovat pizza</span>
+        <div>
+            <Wrapper>
+                <Header>
+                    <Link className='link' to={"/"}>
+                        <div className="logo-container">
+                            <img className='vektor' src={vektor} alt="" />
+                            <img className="logo" src={logo} alt="" />
+                            <span className="logo-container_text">Saxovat pizza</span>
+                        </div>
+                    </Link>
+
+                    <div className="bag">
+                        <img src={bagicon} alt="" />
+                        <span className="bag-price">Buyurtma berish</span>
                     </div>
-                </Link>
 
-                <div className="bag">
-                    <img src={bagicon} alt="" />
-                    <span className="bag-price">Buyurtma berish</span>
-                </div>
+                </Header>
 
-            </Header>
+                <Container>
+                    <h3 className='title'>Sizning zakazingiz</h3>
 
-            <Container>
-                <div className="content">
-                    {bag.map(({ image, title, description, price }) =>
-                        <Productcontainer key={Math.random()}>
-                            <div className="img-container">
-                                <img src={image} alt="" />
-                            </div>
-                            <div className="text-container">
-                                <h4 className='title'>{title}</h4>
-                                <p className='description'>{description}</p>
-                                <div className="price-box">
-                                    <button>O'chirish</button>
-                                    <p className='price'>{price} so'm dan</p>
+                    <div className="content">
+                        {bag.map(({ image, title, description, price }) =>
+                            <Productcontainer key={Math.random()}>
+                                <div className="img-container">
+                                    <img src={image} alt="" />
                                 </div>
-                            </div>
-                        </Productcontainer>)}
-                </div>
-            </Container>
-        </Wrapper>
+                                <div className="text-container">
+                                    <h4 className='product-title'>{title}</h4>
+                                    <p className='description'>{description}</p>
+                                    <div className="price-box">
+                                        <button>O'chirish</button>
+                                        <p className='price'>{price} so'm dan</p>
+                                    </div>
+                                </div>
+                            </Productcontainer>)}
+                    </div>
+                </Container>
+            </Wrapper>
+
+            <Footer />
+        </div>
     );
 }
 
@@ -80,7 +87,7 @@ const Productcontainer = styled.div`
         padding: 20px;
         border-top: 1px solid #F0F0F0;
 
-        .title {
+        .product-title {
             font-weight: 600;
             font-size: 18px;
             line-height: 24px;
@@ -151,8 +158,15 @@ const Container = styled.div`
 
     .content {
         width: 100%;
-        height: 100%;
+        height: 500px;
         overflow-y: scroll;
+    }
+
+    .title {
+        margin-bottom: 14px;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 48px;
     }
 `;
 

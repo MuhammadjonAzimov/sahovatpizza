@@ -13,18 +13,20 @@ import Nav from '../Components/Nav';
 
 const Home = ({ addtobag, bag }) => {
     return (
-        <Wrapper>
-            <Nav bag={bag} />
-            <Sale />
-            <Pizzas addtobag={addtobag} />
-            <Sushies addtobag={addtobag} />
-            <Drinks addtobag={addtobag} />
-            <Snacs addtobag={addtobag} />
-            <Combo addtobag={addtobag} />
-            <Desserts addtobag={addtobag} />
-            <Sous addtobag={addtobag} />
-            <Footer addtobag={addtobag} />
-        </Wrapper>
+        <div>
+            <Wrapper>
+                <Nav bag={bag} />
+                <Sale />
+                <Pizzas addtobag={addtobag} />
+                <Sushies addtobag={addtobag} />
+                <Drinks addtobag={addtobag} />
+                <Snacs addtobag={addtobag} />
+                <Combo addtobag={addtobag} />
+                <Desserts addtobag={addtobag} />
+                <Sous addtobag={addtobag} />
+            </Wrapper>
+            <Footer />
+        </div>
     );
 }
 

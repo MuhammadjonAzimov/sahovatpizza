@@ -49,7 +49,12 @@ export default Footer;
 
 const Wrapper = styled.div`
     width: 100%;
-    padding: 32px 0;
+    padding: 30px 15%;
+    background-color: white;
+
+    @media  (max-width: 1000px) {
+        padding: 30px 6%;
+    }
 
     display: flex;
     justify-content: space-between;
