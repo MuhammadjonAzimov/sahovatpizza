@@ -54,17 +54,13 @@ const Wrapper = styled.div`
 
     @media  (max-width: 1000px) {
         padding: 30px 6%;
+        display: block;
     }
 
     display: flex;
     justify-content: space-between;
 
     user-select: none;
-
-    @media  (max-width: 1000px) {
-        display: block;
-        padding: 12px 0;
-    }
 
     h6 {
         margin-bottom: 2px;
