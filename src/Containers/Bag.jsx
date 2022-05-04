@@ -6,7 +6,7 @@ import logo from '../assets/logo.svg'
 import vektor from '../assets/vektor.svg'
 import Footer from './Footer'
 
-const Bag = ({ bag }) => {
+const Bag = ({ bag, deleteproduct }) => {
     return (
         <div>
             <Wrapper>
@@ -30,7 +30,7 @@ const Bag = ({ bag }) => {
                     <h3 className='title'>Sizning zakazingiz</h3>
 
                     <div className="content">
-                        {bag.map(({ image, title, description, price }) =>
+                        {bag.map(({ id, image, title, description, price }) =>
                             <Productcontainer key={Math.random()}>
                                 <div className="img-container">
                                     <img src={image} alt="" />
@@ -39,7 +39,7 @@ const Bag = ({ bag }) => {
                                     <h4 className='product-title'>{title}</h4>
                                     <p className='description'>{description}</p>
                                     <div className="price-box">
-                                        <button>O'chirish</button>
+                                        <button onClick={() => deleteproduct({ id })}>O'chirish</button>
                                         <p className='price'>{price} so'm dan</p>
                                     </div>
                                 </div>

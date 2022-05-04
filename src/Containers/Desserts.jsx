@@ -12,28 +12,28 @@ const Desserts = ({ addtobag }) => {
     const desertsData = [
         {
             image: cheesrule,
-            id: 1,
+            id: 33,
             title: 'Pishloqli rule',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
             price: "29000",
         },
         {
             image: creamrule,
-            id: 2,
+            id: 34,
             title: 'Krem rule',
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
             price: "28000",
         },
         {
             image: magnitcream,
-            id: 3,
+            id: 35,
             title: "Magnit muzqaymoq",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
             price: "5000",
         },
         {
             image: boxcream,
-            id: 4,
+            id: 36,
             title: "Magnit muzqaymoq",
             description: "Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...",
             price: "20000",

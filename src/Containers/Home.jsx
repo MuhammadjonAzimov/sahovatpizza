@@ -11,7 +11,7 @@ import Sous from './Sous';
 import Footer from './Footer';
 import Nav from '../Components/Nav';
 
-const Home = ({ addtobag, bag }) => {
+const Home = ({ addtobag, bag, }) => {
     return (
         <div>
             <Wrapper>

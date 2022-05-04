@@ -6,7 +6,6 @@ import './App.css';
 import Bag from './Containers/Bag';
 import Home from './Containers/Home';
 
-
 function App() {
 
   const [bag, setBag] = useState(JSON.parse(localStorage.getItem("bag")) || [])
@@ -16,10 +15,16 @@ function App() {
     localStorage.setItem("bag", JSON.stringify([...bag, data]))
   }
 
+  const deleteproduct = (id) => {
+
+  }
+
+  console.log(bag)
+
   return (
     <Routes>
       <Route path='/' element={<Home bag={bag} addtobag={addtobag} />} />
-      <Route path='/bag' element={<Bag bag={bag} />} />
+      <Route path='/bag' element={<Bag bag={bag} deleteproduct={deleteproduct} />} />
     </Routes>
   );
 }
