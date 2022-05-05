@@ -38,6 +38,7 @@ export const Productcontainer = styled.div`
         border-radius: 0 0 12px 12px;
         padding: 20px;
         border-top: 1px solid #F0F0F0;
+        align-content: flex-end;
 
         .title {
             font-weight: 600;

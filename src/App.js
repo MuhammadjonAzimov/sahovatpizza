@@ -16,7 +16,7 @@ function App() {
   }
 
   const deleteproduct = (id) => {
-
+    localStorage.removeItem("bag")
   }
 
   console.log(bag)
@@ -24,7 +24,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Home bag={bag} addtobag={addtobag} />} />
-      <Route path='/bag' element={<Bag bag={bag} deleteproduct={deleteproduct} />} />
+      <Route path='/bag' element={<Bag bag={bag} deleteproduct={deleteproduct} addtobag={addtobag} />} />
     </Routes>
   );
 }

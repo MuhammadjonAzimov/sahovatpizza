@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Additional from './Additional'
+
 import bagicon from '../assets/bag.svg'
 import logo from '../assets/logo.svg'
 import vektor from '../assets/vektor.svg'
 import Footer from './Footer'
 
-const Bag = ({ bag, deleteproduct }) => {
+const Bag = ({ bag, deleteproduct, addtobag }) => {
     return (
         <div>
             <Wrapper>
@@ -45,6 +47,8 @@ const Bag = ({ bag, deleteproduct }) => {
                                 </div>
                             </Productcontainer>)}
                     </div>
+
+                    <Additional addtobag={addtobag} />
                 </Container>
             </Wrapper>
 
