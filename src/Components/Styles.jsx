@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 30px;
 `;
 
@@ -75,6 +75,11 @@ export const Productcontainer = styled.div`
                     padding: 10px 28px;
                     font-size: 16px;
                 }
+
+                @media  (max-width: 700px) {
+                    padding: 6px 18px;
+                    font-size: 14px;
+                }
             }
 
             .price {
@@ -85,6 +90,10 @@ export const Productcontainer = styled.div`
 
                 @media  (max-width: 1000px) {
                     font-size: 16px;
+                }
+
+                @media  (max-width: 700px) {
+                    font-size: 14px;
                 }
             }
         }
