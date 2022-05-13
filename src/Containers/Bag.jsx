@@ -23,7 +23,9 @@ const Bag = ({ bag, deleteproduct, addtobag }) => {
 
                     <div className="bag">
                         <img src={bagicon} alt="" />
-                        <span className="bag-price">Buyurtma berish</span>
+                        <Link className='link' to={"/authorization"}>
+                            <span className="bag-price">Buyurtma berish</span>
+                        </Link>
                     </div>
 
                 </Header>

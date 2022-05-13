@@ -5,6 +5,7 @@ import './App.css';
 
 import Bag from './Containers/Bag';
 import Home from './Containers/Home';
+import Authorization from './Containers/Authorization'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home bag={bag} addtobag={addtobag} />} />
       <Route path='/bag' element={<Bag bag={bag} deleteproduct={deleteproduct} addtobag={addtobag} />} />
+      <Route path='/authorization' element={<Authorization />} />
     </Routes>
   );
 }
