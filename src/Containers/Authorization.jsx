@@ -101,7 +101,7 @@ const Wrapper = styled.div`
             right: -50px;
 
             @media  (max-width: 1000px) {
-                top: -130px;
+                top: -100px;
                 right: -10px;
             }
         }
